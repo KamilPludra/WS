@@ -1,0 +1,391 @@
+
+$linkColor: #00bfff;
+$linkColorHover: #00bfff;
+
+$baseFontSize: 16px;
+
+$myOrange:#f89406;
+$myBlueDark: #304269;
+$myBlue: #91BED4;
+$myBlueLight: #D9E8F5;
+$myWhite: #eee;
+$myGrayBlue: #43464C;
+
+.pull-right {
+  color: #00bfff;
+}
+
+.someclass{color: #00bfff}
+
+.pull-right {color: #00bfff}
+
+ul.pull-right li a {color: #00bfff}
+
+
+//.btn-group {
+ // linkColor: #571B7e;
+ // linkColorHover: #00bfff;
+ // float: left;
+
+ // color: #00bfff;
+ // text-transform: uppercase;
+ // letter-spacing: -1px;
+ // padding-top: 7px;
+  //font-weight: bold;
+ /// line-height: 1;
+ // &:hover {
+//    color: #00bfff;
+//    text-decoration: none;
+//  }
+//}
+
+//.active {
+//  linkColor: #571B7e;
+//  linkColorHover: #00bfff;
+//  float: left;
+//
+////  color: #00bfff;
+//  text-transform: uppercase;
+  //letter-spacing: -1px;
+  //padding-top: 7px;
+//  font-weight: bold;
+ // line-height: 1;
+ // &:hover {
+  //  color: #00bfff;
+   // text-decoration: none;
+ // }
+//}
+
+
+@font-face {
+  font-family: 'arial';
+
+}
+
+
+
+
+$sansFontFamily: 'arial';
+
+$heroUnitBackground: lighten($myWhite, 20);
+
+
+
+
+
+@import "bootstrap";
+
+
+
+body {
+  padding-top: 60px;
+  background-color: $myBlueLight;
+
+
+}
+
+
+
+
+/******  Zmienne itp. ******/
+
+$grayMediumLight: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+
+
+
+/****** Uniwersalne ******/
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+/****** Typografia ******/
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $grayLight;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+
+/****** Logo / header******/
+
+#logo {
+  linkColor: #00bfff;
+  linkColorHover: #00bfff;
+  float: left;
+  margin-right: 10px;
+  font-size: 1.9em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 7px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: #00bfff;
+    text-decoration: none;
+  }
+}
+
+/****** footer / stopka ******/
+
+footer {
+  font-size: 16px;
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #00bfff;
+  color: $grayLight;
+  a {
+    color: #00bfff;
+    &:hover {
+      color: #00bfff;
+    }
+  }
+  small {
+    float: left;
+    font-size: 16px;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+      font-size: 16px;
+
+    }
+  }
+
+}
+
+
+
+logga{
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: #00bfff;
+  a {
+    color: $linkColorHover;
+    &:hover {
+      color: #00bfff;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+
+}
+
+/****** różne ******/
+
+  .debug_dump {
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-top: 45px;
+    @include box_sizing;
+  }
+
+/******  pasek boczny ******/
+
+  aside {
+    section {
+      padding: 10px 0;
+      border-top: 1px solid $grayLighter;
+      &:first-child {
+        border: 0;
+        padding-top: 9;
+      }
+      span {
+        display: block;
+        margin-bottom: 12px;
+        line-height: 1;
+      }
+      h1 {
+        font-size: 1.8em;
+        text-align: left;
+        letter-spacing: -1px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+
+  }
+
+
+.stats {
+  overflow: auto;
+  a {
+    float: left;
+    padding: 0 15px;
+    font-size: 13px;
+    border-left: 1px solid #00bfff;
+    color: #00bfff;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+}
+
+
+
+/******  formularze rejestracji ******/
+
+  input, textarea, select, .uneditable-input {
+    border: 3px solid #bbb;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    @include box_sizing;
+  }
+
+  input {
+    height: auto !important;
+  }
+
+  #error_explanation {
+    color: #f00;
+    ul {
+      list-style: none;
+      margin: 0 0 18px 0;
+    }
+  }
+
+  .field_with_errors {
+    @extend .control-group;
+    @extend .error;
+  }
+
+
+/******  indeks użytkowników ******/
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:last-child {
+      border-bottom: 1px solid $grayLighter;
+    }
+  }
+}
+
+/******  microposts ******/
+
+
+.microposts {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+.content {
+  display: block;
+}
+.timestamp {
+  color: $grayLight;
+}
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+
+/******  justowanie  ******/
+
+.fulljustify {
+  text-align:justify;
+}
+.fulljustify:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}

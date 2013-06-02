@@ -1,0 +1,71 @@
+<% if request.env["HTTP_USER_AGENT"] =~ /MSIE 8.0/%>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" >
+<% end %>
+
+
+<% if signed_in? %>
+    <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/stats' %>
+      </section>
+      <section>
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+
+
+     <div class="span8">
+      <h3>Wszystkie wiadomości: </h3>
+       <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
+
+    <div class="center hero-unit">
+
+
+     <h1>Witamy na stronie poświęconej problemowi WSAD</h1>
+
+     <h2>
+
+
+     Problemy szeregowania zadań mają ten sam termin realizacji, kary są oceniane zarówno dla wczesnego i późnego zakończenia pracy. Jednak wczesność i spóźnienia realizacji zadań są karane. Celem planowania jest ograniczenie albo ustalenie ważonej sumy odchyleń bezwzględnych (WSAD).
+
+
+       <br><br>Dla każdego celu rozważamy dwie wersje tego problemu. W nieograniczonej wersji wzrost terminu nie daje zmniejszenia w funkcji celu.
+
+
+
+     </h2>
+
+      <%= link_to "Szereguj zadania", zarejestruj_path, class: "btn btn-large btn-primary" %>
+      <br><br>
+      <%= link_to image_tag("/Your-Bunch.png", alt: "Rozpocznij szeregowanie"), zarejestruj_path %>
+
+      <br>
+    <br>
+
+      <!-- <a href="http://www.put.poznan.pl/">Politechnika Poznańska</a>
+           -->
+
+   </div>
+
+    <div>
+
+           <p id="tagline" class="fulljustify">
+
+            <%= link_to image_tag("/PP.png", alt: "Politechnika Poznańska"), "http://www.put.poznan.pl/" %>
+
+             <%= link_to image_tag("/IAII.png", alt: "Instytut Automatyki i Inżynierii Informatycznej"), "http://www.cie.put.poznan.pl/" %>
+
+             <%= link_to image_tag("/WE.png", alt: "Wydział Informatyki Politechniki Poznańskiej"), "http://www.fcm.put.poznan.pl/" %>
+
+           </p>
+     </div>
+
+
+<% end %>

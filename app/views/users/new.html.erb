@@ -1,0 +1,28 @@
+<% provide(:title, 'Szereguj zadania') %>
+<h1>Szereguj zadania</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+
+        <%= f.label :name, "Wpisz zadania po przecinku" %>
+        <%= f.text_field :name %>
+
+        <%= f.label :email, "Podaj wspólny żądany termin zakończenia d" %>
+        <%= f.text_field :email %>
+
+        <%= f.label :password, "Podaj jednostkowy koszt wykonania zadania PRZED terminem - Alfa" %>
+        <%= f.password_field :password %>
+
+        <%= f.label :password_confirmation, "Podaj jednostkowy koszt wykonania zadania PO terminie - Beta" %>
+        <%= f.password_field :password_confirmation %>
+
+        <br>
+        <%= f.submit "Szereguj", class: "btn btn-large btn-primary" %>
+
+
+    <% end %>
+  </div>
+</div>

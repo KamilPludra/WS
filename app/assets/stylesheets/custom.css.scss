@@ -1,6 +1,6 @@
 
-$linkColor: #00bfff;
-$linkColorHover: #00bfff;
+$linkColor: #0040ff;
+$linkColorHover: #0040ff;
 
 $baseFontSize: 16px;
 
@@ -12,46 +12,46 @@ $myWhite: #eee;
 $myGrayBlue: #43464C;
 
 .pull-right {
-  color: #00bfff;
+  color: #0040ff;
 }
 
-.someclass{color: #00bfff}
+.someclass{color: #0040ff}
 
-.pull-right {color: #00bfff}
+.pull-right {color: #0040ff}
 
-ul.pull-right li a {color: #00bfff}
+ul.pull-right li a {color: #0040ff}
 
 
 //.btn-group {
  // linkColor: #571B7e;
- // linkColorHover: #00bfff;
+ // linkColorHover: #0040ff;
  // float: left;
 
- // color: #00bfff;
+ // color: #0040ff;
  // text-transform: uppercase;
  // letter-spacing: -1px;
  // padding-top: 7px;
   //font-weight: bold;
  /// line-height: 1;
  // &:hover {
-//    color: #00bfff;
+//    color: #0040ff;
 //    text-decoration: none;
 //  }
 //}
 
 //.active {
 //  linkColor: #571B7e;
-//  linkColorHover: #00bfff;
+//  linkColorHover: #0040ff;
 //  float: left;
 //
-////  color: #00bfff;
+////  color: #0040ff;
 //  text-transform: uppercase;
   //letter-spacing: -1px;
   //padding-top: 7px;
 //  font-weight: bold;
  // line-height: 1;
  // &:hover {
-  //  color: #00bfff;
+  //  color: #0040ff;
    // text-decoration: none;
  // }
 //}
@@ -157,8 +157,8 @@ p {
 /****** Logo / header******/
 
 #logo {
-  linkColor: #00bfff;
-  linkColorHover: #00bfff;
+  linkColor: #0040ff;
+  linkColorHover: #0040ff;
   float: left;
   margin-right: 10px;
   font-size: 1.9em;
@@ -169,7 +169,7 @@ p {
   font-weight: bold;
   line-height: 1;
   &:hover {
-    color: #00bfff;
+    color: #0040ff;
     text-decoration: none;
   }
 }
@@ -180,12 +180,12 @@ footer {
   font-size: 16px;
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #00bfff;
+  border-top: 1px solid #0040ff;
   color: $grayLight;
   a {
-    color: #00bfff;
+    color: #0040ff;
     &:hover {
-      color: #00bfff;
+      color: #0040ff;
     }
   }
   small {
@@ -211,11 +211,11 @@ logga{
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
-  color: #00bfff;
+  color: #0040ff;
   a {
     color: $linkColorHover;
     &:hover {
-      color: #00bfff;
+      color: #0040ff;
     }
   }
   small {
@@ -280,8 +280,8 @@ logga{
     float: left;
     padding: 0 15px;
     font-size: 13px;
-    border-left: 1px solid #00bfff;
-    color: #00bfff;
+    border-left: 1px solid #0040ff;
+    color: #0040ff;
     &:first-child {
       padding-left: 0;
       border: 0;

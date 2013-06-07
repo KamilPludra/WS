@@ -8,6 +8,10 @@ gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 
+gem "lazy_high_charts", "~> 1.4.2"
+gem "googlecharts", "~> 1.6.8"
+gem "google_visualr", ">= 2.1"
+
 group :development, :test do
   gem 'sqlite3', '1.3.7'
   gem 'rspec-rails', '2.13.1'

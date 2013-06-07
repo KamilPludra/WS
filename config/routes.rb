@@ -17,16 +17,18 @@ WS::Application.routes.draw do
 
   resources :relationships, only: [:create, :destroy]
 
-  get '/zarejestruj',  to: 'users#new'
-  get '/zaloguj',  to: 'sessions#new'
-  #match '/wyloguj', to: 'sessions#destroy', via: :delete
+  match '/zarejestruj',  to: 'users#new', via: [:get, :post]
+  match '/zaloguj',  to: 'sessions#new', via: [:get, :post]
+  match '/wyloguj', to: 'sessions#destroy', via: :delete, via: [:get, :post]
 
 
-  root to: 'strony_statyczne#home'
+  root to: 'strony_statyczne#home', via: [:get, :post]
 
-  get '/pomoc',    to: 'strony_statyczne#pomoc'
-  get '/onas',   to: 'strony_statyczne#onas'
-  get '/kontakt', to: 'strony_statyczne#kontakt'
+  match '/pomoc',    to: 'strony_statyczne#pomoc', via: [:get, :post]
+  match '/onas',   to: 'strony_statyczne#onas', via: [:get, :post]
+  match '/kontakt', to: 'strony_statyczne#kontakt', via: [:get, :post]
+
+  match 'calculate' => 'strony_statyczne#calculate', via: [:get, :post]
 
 
   # The priority is based upon order of creation: first created -> highest priority.

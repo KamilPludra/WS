@@ -1,3 +1,5 @@
+
+
 <% if request.env["HTTP_USER_AGENT"] =~ /MSIE 8.0/%>
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" >
 <% end %>
@@ -28,7 +30,7 @@
     <div class="center hero-unit">
 
 
-     <h1>Witamy na stronie poświęconej problemowi WSAD</h1>
+     <h1>WSAD - weighted sum of absolute deviations</h1>
 
      <h2>
 
@@ -40,12 +42,84 @@
 
 
 
-     </h2>
+       <br> <br><br>     <br>
+       <h1>Szerguj zadania:</h1>
+       <br>
 
+
+
+       <%= form_tag('/calculate') do %>
+
+           <%= text_field_tag "list[]"%>
+           <%= label_tag(:list, "Wpisz zadania oddzielając je spacjami") %><br />
+
+
+
+
+           <%= text_field_tag(:s) %>
+           <%= label_tag(:s, "Podaj wspólny żądany termin zakończenia d") %><br />
+
+           <%= text_field_tag(:s) %>
+           <%= label_tag(:s, "Podaj jednostkowy koszt wykonania zadania PRZED terminem - Alfa") %><br />
+
+           <%= text_field_tag(:x) %>
+           <%= label_tag(:x, "Podaj jednostkowy koszt wykonania zadania PO terminie - Beta") %><br />
+
+
+
+           <%= text_field_tag "uszeregowane[]"%>
+           <%= text_field_tag(:uszeregowane, @result, :disabled => true) %>
+
+
+
+           <%= submit_tag("Szerguj zadania", class: "btn btn-large btn-primary") %>
+
+
+       <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       <br>
+
+
+
+       <img src="http://chart.apis.google.com/chart?chxt=x,y&chd=s:SIQf9YOp&chtt=Problem+WSAD&chts=FF0000,&cht=bvs&chs=250x400&chxr=0,9,30"/>
+
+       <br><br>
+
+       <%= text_field_tag(:e) %>
+       <%= label_tag(:e, "Suma kosztów") %><br />
+
+       <br><br>
+
+
+
+
+
+       <!--  <%= text_field_tag(:s) %>
+           <%= label_tag(:s, "Second Number") %><br />
+
+         -->
+
+
+
+     </h2>
+      <!--
       <%= link_to "Szereguj zadania", zarejestruj_path, class: "btn btn-large btn-primary" %>
       <br><br>
-      <%= link_to image_tag("/Your-Bunch.png", alt: "Rozpocznij szeregowanie"), zarejestruj_path %>
-
+        <%= link_to image_tag("/Your-Bunch.png", alt: "Rozpocznij szeregowanie"), zarejestruj_path %>
+        -->
       <br>
     <br>
 

@@ -11,7 +11,7 @@ gem 'bootstrap-will_paginate', '0.0.9'
 gem "lazy_high_charts", "~> 1.4.2"
 gem "googlecharts", "~> 1.6.8"
 gem "google_visualr", ">= 2.1"
-gem 'strong_parameters'
+#gem 'strong_parameters'
 
 group :development, :test do
   gem 'sqlite3', '1.3.7'

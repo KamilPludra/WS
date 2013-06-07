@@ -17,16 +17,16 @@ WS::Application.routes.draw do
 
   resources :relationships, only: [:create, :destroy]
 
-  match '/zarejestruj',  to: 'users#new', via: [:get, :post]
-  match '/zaloguj',  to: 'sessions#new', via: [:get, :post]
-  match '/wyloguj', to: 'sessions#destroy', via: :delete, via: [:get, :post]
+  match '/zarejestruj',  to: 'users#new', via: 'get'
+  match '/zaloguj',  to: 'sessions#new', via: 'get'
+  match '/wyloguj', to: 'sessions#destroy', via: :delete, via: 'get'
 
 
   root to: 'strony_statyczne#home', via: [:get, :post]
 
-  match '/pomoc',    to: 'strony_statyczne#pomoc', via: [:get, :post]
-  match '/onas',   to: 'strony_statyczne#onas', via: [:get, :post]
-  match '/kontakt', to: 'strony_statyczne#kontakt', via: [:get, :post]
+  match '/pomoc',    to: 'strony_statyczne#pomoc', via: 'get'
+  match '/onas',   to: 'strony_statyczne#onas', via: 'get'
+  match '/kontakt', to: 'strony_statyczne#kontakt', via: 'get'
 
   match 'calculate' => 'strony_statyczne#calculate', via: [:get, :post]
 

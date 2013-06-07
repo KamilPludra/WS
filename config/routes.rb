@@ -2,25 +2,7 @@ WS::Application.routes.draw do
 
 
 
-  get "password_resets/new"
-
-  resources :users do
-    member do
-      get :following, :followers
-
-    end
-  end
-
-
-  resources :sessions,   only: [:new, :create, :destroy]
-  resources :microposts, only: [:create, :destroy]
-
-  resources :relationships, only: [:create, :destroy]
-
-  match '/zarejestruj',  to: 'users#new', via: 'get'
-  match '/zaloguj',  to: 'sessions#new', via: 'get'
-  match '/wyloguj', to: 'sessions#destroy', via: :delete, via: 'get'
-
+  
 
   root to: 'strony_statyczne#home', via: [:get, :post]
 
